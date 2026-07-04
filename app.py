@@ -89,6 +89,16 @@ if user_input:
 
     progress_bar.progress(25)
 
+    # ---- WEBSITE VALIDATION ---- #
+
+    if not website or website == "Website not found":
+
+        st.error(
+            "Could not find company website."
+        )
+
+        st.stop()
+
     st.chat_message("assistant").write(
         f"Official Website: {website}"
     )
